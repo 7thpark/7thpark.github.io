@@ -291,11 +291,8 @@ a {
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
-  padding: 1rem;
+  padding: 0;
   margin: 0;
-  border-style: solid;
-  border-color: #2d2d2d;
-  border-width: 1px 0;
   overflow: auto;
   color: #ccc;
   line-height: 1.6;
@@ -303,7 +300,7 @@ a {
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
   color: #666;
-  font-size: 0.85em;
+  font-size: 12px;
 }
 .article-entry pre,
 .article-entry code {
@@ -313,7 +310,7 @@ a {
   padding: 0.125rem 0.3rem;
   background-color: rgba(0,0,0,0.1);
   border-radius: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-shadow: 0 1px #fff;
 }
 .article-entry pre code {
@@ -335,7 +332,7 @@ a {
   padding: 0;
 }
 .article-entry .highlight figcaption {
-  font-size: 0.85em;
+  font-size: 12px;
   color: #999;
   line-height: 1em;
   margin-bottom: 1em;
@@ -343,18 +340,32 @@ a {
 .article-entry .highlight figcaption a {
   float: right;
 }
+.article-entry .highlight .gutter {
+  padding: 1rem;
+  padding-right: 0;
+  background-color: rgba(0,0,0,0.5);
+}
 .article-entry .highlight .gutter pre {
-  text-align: right;
   padding-right: 20px;
+  background: none;
+}
+.article-entry .highlight .gutter pre .line {
+  justify-content: flex-end;
+}
+.article-entry .highlight .code {
+  width: 100%;
+  padding-left: 1rem;
 }
 .article-entry .highlight .line {
-  height: 1.6;
+  display: flex;
+  align-items: center;
+  height: 22.400000000000002px;
 }
 .article-entry .highlight .line.marked {
   background: #515151;
 }
 .article-entry .gist {
-  margin: 0 -1rem;
+  margin: 0;
   border-style: solid;
   border-color: #2d2d2d;
   border-width: 1px 0;
@@ -399,60 +410,61 @@ a {
 .article-entry .gist .gist-file .gist-meta a:hover {
   text-decoration: underline;
 }
-pre .comment,
-pre .title {
+.highlight .comment,
+.highlight .title {
   color: #999;
 }
-pre .variable,
-pre .attribute,
-pre .tag,
-pre .regexp,
-pre .ruby .constant,
-pre .xml .tag .title,
-pre .xml .pi,
-pre .xml .doctype,
-pre .html .doctype,
-pre .css .id,
-pre .css .class,
-pre .css .pseudo {
+.highlight .variable,
+.highlight .attribute,
+.highlight .tag,
+.highlight .regexp,
+.highlight.ruby .constant,
+.highlight.xml .tag .title,
+.highlight.xml .pi,
+.highlight.xml .doctype,
+.highlight.html .doctype,
+.highlight.css .id,
+.highlight.css .class,
+.highlight.css .pseudo,
+.highlight.php .meta {
   color: #f2777a;
 }
-pre .number,
-pre .preprocessor,
-pre .built_in,
-pre .literal,
-pre .params,
-pre .constant {
+.highlight .number,
+.highlight .preprocessor,
+.highlight .built_in,
+.highlight .literal,
+.highlight .params,
+.highlight .constant {
   color: #f99157;
 }
-pre .class,
-pre .ruby .class .title,
-pre .css .rules .attribute {
+.highlight .class,
+.highlight.ruby .class .title,
+.highlight.css .rules .attribute {
   color: #9c9;
 }
-pre .string,
-pre .value,
-pre .inheritance,
-pre .header,
-pre .ruby .symbol,
-pre .xml .cdata {
+.highlight .string,
+.highlight .value,
+.highlight .inheritance,
+.highlight .header,
+.highlight.ruby .symbol,
+.highlight.xml .cdata {
   color: #9c9;
 }
-pre .css .hexcolor {
+.highlight.css .hexcolor {
   color: #6cc;
 }
-pre .function,
-pre .python .decorator,
-pre .python .title,
-pre .ruby .function .title,
-pre .ruby .title .keyword,
-pre .perl .sub,
-pre .javascript .title,
-pre .coffeescript .title {
+.highlight .function,
+.highlight.python .decorator,
+.highlight.python .title,
+.highlight.ruby .function .title,
+.highlight.ruby .title .keyword,
+.highlight.perl .sub,
+.highlight.javascript .title,
+.highlight.coffeescript .title {
   color: #69c;
 }
-pre .keyword,
-pre .javascript .function {
+.highlight .keyword,
+.highlight.javascript .function {
   color: #c9c;
 }
 .comments {
