@@ -27,6 +27,9 @@
   src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
   src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
 }
+body {
+  color: #5a5a5a;
+}
 h1,
 h2,
 h3,
@@ -35,7 +38,7 @@ h4 {
 }
 a {
   text-decoration: none;
-  color: #1976d2;
+  color: #009688;
 }
 .d-flex {
   display: flex;
@@ -63,6 +66,11 @@ a {
   padding: 0;
   margin: 0;
 }
+.navbar .branding .pure-menu-link,
+.navbar .branding:hover {
+  background-color: #000;
+  color: #fff;
+}
 .sidebar {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -74,14 +82,24 @@ a {
   justify-content: center;
 }
 .widget-wrap {
-  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
 }
 .widget-title {
-  font-size: 0.875rem;
   color: #808080;
 }
 .widget {
   line-height: 1.6;
+}
+.widget ul li {
+  display: inline;
+}
+.widget ul li+li {
+  margin-left: 1rem;
+}
+.category-list-child {
+  display: inline;
+  margin-left: 1rem;
 }
 .mobile-nav {
   display: none;
@@ -307,10 +325,6 @@ a {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  padding: 0.125rem 0.3rem;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 0.25rem;
-  font-size: 14px;
   text-shadow: 0 1px #fff;
 }
 .article-entry pre code {
@@ -404,7 +418,7 @@ a {
   margin-left: 1rem;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #1976d2;
+  color: #009688;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
