@@ -36,6 +36,9 @@ h3,
 h4 {
   font-family: 'Helvetica Neue', sans-serif;
 }
+p {
+  font-family: serif;
+}
 a {
   text-decoration: none;
   color: #009688;
@@ -139,6 +142,9 @@ a {
 }
 .article-category .pure-button + .pure-button {
   margin-left: 1em;
+}
+.article-entry {
+  font-family: serif;
 }
 .article-entry >ol >li,
 .article-entry >ul >li {
